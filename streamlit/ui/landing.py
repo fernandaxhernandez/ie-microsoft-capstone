@@ -513,7 +513,7 @@ def render_landing():
       </div>
       <div class="nav-actions">
         <div class="btn">Login</div>
-        <a class="btn btn-primary nav-cta-link" href="?view=app">Request a demo</a>
+        <a class="btn btn-primary nav-cta-link" href="?view=app">Start Analysis</a>
       </div>
     </div>
 
@@ -523,7 +523,7 @@ def render_landing():
       </video>
       <div class="hero-overlay"></div>
       <div class="inner">
-        <div class="pill">Spain • GBIF Biodiversity Explorer</div>
+        <div class="pill">GBIF Biodiversity Explorer</div>
         <h1 class="title">Biodiversity intelligence for faster site screening</h1>
         <div class="sub">
           Explore H3-based biodiversity signals, protected area context, and infrastructure pressure —

@@ -150,7 +150,7 @@ BEDROCK_REGION = "eu-west-2"
 def get_s3fs() -> s3fs.S3FileSystem:
     """Return a cached s3fs filesystem using the configured AWS profile."""
     s3fs.S3FileSystem.clear_instance_cache()
-    return s3fs.S3FileSystem(profile=AWS_PROFILE)
+    return s3fs.S3FileSystem()
 
 @st.cache_resource
 def get_duckdb_con():

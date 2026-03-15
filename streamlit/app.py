@@ -166,7 +166,7 @@ def get_duckdb_con():
     con.execute("INSTALL httpfs; LOAD httpfs;")
 
     # Resolve credentials from the boto3 SSO profile (never hardcoded)
-    session = boto3.Session(profile_name=AWS_PROFILE)
+    session = boto3.Session()
     creds = session.get_credentials().get_frozen_credentials()
     region = session.region_name or "eu-west-1"
 
@@ -187,7 +187,7 @@ def get_duckdb_con():
 @st.cache_resource
 def _get_bedrock_agent_client():
     """Return Bedrock Agent Runtime client."""
-    session = boto3.Session(profile_name=AWS_PROFILE)
+    session = boto3.Session()
     cfg = Config(read_timeout=300, connect_timeout=30, retries={"mode": "adaptive"})
     return session.client(
         "bedrock-agent-runtime",
